@@ -8,9 +8,6 @@ sections:
   path: FORESTRY-README.md
   label: Welcome - First Steps
   read_only: true
-- type: jekyll-posts
-  label: Posts
-  create: all
 - type: directory
   path: ''
   label: Pages

@@ -216,6 +216,13 @@ input.inverted::placeholder {
     padding: 1rem 2rem;
 }
 
+#header {
+    position: sticky;
+    top: 0;
+    transition: top 0.3s;
+    background-color: #fff;
+}
+
 .block-header-2--logo img {
     max-height: 24px;
     max-height: 1.5rem
@@ -224,8 +231,18 @@ input.inverted::placeholder {
 .block-header-2--nav {
     display: -ms-flexbox;
     display: flex;
+    flex-grow: 1;
     -ms-flex-align: baseline;
-    align-items: baseline
+    align-items: baseline;
+}
+
+/* override bootstrap class 
+wanted to have the nav items on the right
+--> flex-grow:0*/
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center
 }
 
 .block-header-2 .nav-item {

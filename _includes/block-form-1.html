@@ -1,0 +1,38 @@
+{% if section.form_alignment and section.form_alignment == "Left" %}
+{% include block-feature-2.html %}
+{% else %}
+<section id="{{ section.slug | slugify }}" class="block block-form-1">
+  <div class="container">
+    <div class="columns">
+      <div class="column text">
+        <h2><span class="light">{{ section.headline }}</span></h2>
+        <p>{{ section.content }}</p>
+      </div>
+      <div class="column media cardform">
+        <form name="{{ section.form.name }}" method="POST" data-netlify="true">
+          {% for i in (1..5) %}
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="{{ section.form.input }}" name="{{ section.form.input }}">
+              </div>
+              <div class="col">
+                <select class="form-select" name="{{ section.form.select_placeholder }}">
+                  <option selected>{{section.form.select_placeholder}}</option>
+                  {% for option in section.form.options %}
+                    <option value="1">{{option}}</option>
+                  {% endfor %}
+                </select>
+              </div>     
+            </div>
+          {% endfor %}
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>        
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

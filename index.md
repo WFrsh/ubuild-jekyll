@@ -61,6 +61,18 @@ page_sections:
     media:
       image: "/uploads/2018/06/21/edit.gif"
       alt_text: Customize Blocks
+  - block: form-1
+    form_alignment: Right
+    slug: form
+    headline:
+      <strong>Forms</strong>
+    content:
+      Your Form could be on the right
+    form:
+      name: Essen
+      input: Name
+      select_placeholder: Menü Auswahl
+      options: [One, Two, Three, Four]  
   - template: 1-column-text
     block: one-column-1
     slug: responsive

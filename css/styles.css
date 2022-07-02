@@ -723,6 +723,64 @@ wanted to have the nav items on the right
     }
 }
 
+.block-form-1 .columns {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center
+}
+
+.block-form-1 .column.text {
+    margin-right: 0;
+    margin-bottom: 32px;
+    margin-bottom: 2rem
+}
+
+.block-form-1 .column.media,
+.block-form-1 .column.text {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%
+}
+
+.block-form-1 .column.text h2 {
+    margin-bottom: 16px;
+    margin-bottom: 1rem
+}
+
+.block-form-1 .column.media img {
+    max-width: 100%
+}
+
+.block-form-1 .column.media .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.block-form-1 button {
+    float: right;
+}
+
+@media screen and (min-width:700px) {
+    .block-form-1 .columns {
+        text-align: left
+    }
+
+    .block-form-1 .column.text {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        margin-right: 2rem;
+        margin-bottom: 0
+    }
+
+    .block-form-1 .column.media {
+        -ms-flex: 0 0 calc(60% - 2rem);
+        flex: 0 0 calc(60% - 2rem)
+    }
+}
+
 .block-feature-2 .columns {
     display: -ms-flexbox;
     display: flex;
@@ -855,3 +913,12 @@ body {
     background: #ffedbc;
     color: #333
 }
+
+.cardform {
+	background-color: #fff;
+	margin: 10% auto;
+	position: relative;
+	padding: 34px;
+    border: solid #999999 1px;
+    box-shadow: 10px 10px 10px #999999;
+}  
